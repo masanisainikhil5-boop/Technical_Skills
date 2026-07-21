@@ -1,0 +1,117 @@
+--Javascript - v8 engine - Machine code
+--Node.js is needed to run the javascript code. Node.js is nothing but an
+Runtime engine. It is used as frontend as well as backend.
+--npm - node package manager which are pre-made libraries
+--Javascript is an interpreter language with JIT(Just in time) compilation.
+--Interpreter language - Runs the code line by line.
+--Compilation language - Converts the whole block of code ito machine code at once
+and runs the code.
+
+
+#  **How JavaScript Engine Works**
+A JavaScript engine is a program that **reads, interprets, and executes** JavaScript code. 
+Here's a complete breakdown of how it works step by step.
+
+PS.  Make sure that everyone download the **Code Runner Extension.**
+
+🟩 **Step-by-Step Breakdown**
+
+> let x = 10;
+
+The engine first breaks the raw code into small meaningful chunks called **tokens**.
+
+### **1. Lexical Analysis (Tokenizing)**
+Example: let x = 10;
+Tokens → [let] [x] [=] [10] [;]
+
+### **2. Parsing (Syntax Analysis)**
+The tokens are then organized into a tree-like structure called an **Abstract Syntax Tree (AST)**. This represents the grammatical structure of the code.
+
+ Program
+
+ |
+
+ VariableDeclaration
+
+ / \
+
+ Identifier Literal
+
+ (x) (10)
+
+### 3. Create AST (Abstract Syntax Tree)
+The tokens are converted into a structured tree representing the logic.
+Simplified AST example:
+```
+Program
+├── VariableDeclaration (let)
+│     └── Identifier: a
+│     └── Literal: 10
+└── ExpressionStatement
+      └── CallExpression: console.log
+            └── Identifier: a
+```
+[astexplorer.net/](https://astexplorer.net/) 
+[ast-explorer.dev/](https://ast-explorer.dev/) 
+
+### 4. Interpreter (Ignition) Converts AST to Bytecode
+**Ignition** creates lightweight bytecode from AST and starts executing immediately.
+Bytecode might look like:
+
+```
+LdaSmi [10]      // Load immediate small integer 10
+Star <a>         // Store into variable a
+LdaGlobal console
+LdaNamedProperty log
+Lda <a>          // Load value of a
+CallProperty1    // Call log with 1 argument
+``'
+
+### 6. Profiler + JIT Optimization
+Since this code is very small and not repeated, the **Profiler sees no benefit**, so **TurboFan (JIT Compiler) does NOT optimize**.
+> If we had a loop with thousands of executions, V8 would compile that part into machine code.
+Hot Code -> Code which needs optimization
+TurboFan -> Compiler convert or optimize the code of the Hot code. -> ByteCode. 
+
+### 7. Garbage Collector 
+Automatically frees memory by removing unused or unreachable objects. Prevents memory leaks and keeps performance efficient.
+
+### 8. Machine Code Execution
+The final optimized code is executed directly by the **CPU**. This gives the best performance at runtime.
+
+//Difference between let, var and const
+var - function scope
+
+> var, let, const
+
+- `var` is **function-scoped**, NOT block-scoped. It leaks out of `if`/`for` blocks. `var` also allows **re-declaration**:
+- `let`  is **block-scoped**. It stays within `if` /`for` /`{}`  blocks. `let` does NOT allow re-declaration in the same scope
+- `const` -> Block-scoped like `let` , Cannot be reassigned, Must be initialized at declaration.
+
+
+Hoisting:
+Hoisting is JavaScript's default behavior of moving variable and function **DECLARATIONS** to the top of 
+their containing scope during the compilation phase, BEFORE the code is actually executed.
+
+console.log(greeting);   // Output: undefined
+var greeting = "Hello!";
+console.log(greeting);   // Output: "Hello!"
+
+// Behind the scenes:
+// var greeting;              <-- hoisted with undefined
+// console.log(greeting);    <-- undefined
+// greeting = "Hello!";      <-- assignment stays in place
+// console.log(greeting);    <-- "Hello!"
+
+How let Hoisting Works?
+Variables declared with `let` ARE hoisted, but are **NOT initialized**. They enter the 
+**Temporal Dead Zone (TDZ)** from the start of their block until the declaration line.
+
+Accessing a let variable in the TDZ throws: `ReferenceError: Cannot access variable before 
+initialization` 
+
+### What is the Temporal Dead Zone (TDZ)?
+The TDZ is the period between when a scope starts and when the let/const declaration is encountered. 
+During this zone, the variable EXISTS in memory but is marked as "uninitialized."
+
+
