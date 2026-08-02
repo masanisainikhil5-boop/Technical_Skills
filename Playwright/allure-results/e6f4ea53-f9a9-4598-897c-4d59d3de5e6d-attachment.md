@@ -1,0 +1,864 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: SVG\svg.spec.ts >> Handle SVG Elements >> Handle SVG
+- Location: tests\SVG\svg.spec.ts:8:9
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: locator('//div[contains(@data-id,"CPU")]/div/a[2]').first()
+Expected: visible
+Timeout: 15000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 15000ms
+  - waiting for locator('//div[contains(@data-id,"CPU")]/div/a[2]').first()
+
+```
+
+```yaml
+- link "Flipkart":
+  - /url: /
+  - img "Flipkart"
+- link "Explore Plus":
+  - /url: /plus
+  - text: Explore Plus
+  - img
+- textbox "Search for products, brands and more"
+- button:
+  - img
+- link "Login":
+  - /url: /account/login?ret=/search
+- link "Become a Seller":
+  - /url: https://seller.flipkart.com/sell-online/?utm_source=fkwebsite&utm_medium=websitedirect
+- text: More
+- img
+- link "Cart":
+  - /url: /viewcart?exploreMode=true&preference=FLIPKART
+  - img
+  - text: Cart
+- text: Electronics
+- img
+- text: TVs & Appliances
+- img
+- text: Men
+- img
+- text: Women
+- img
+- text: Baby & Kids
+- img
+- text: Home & Furniture
+- img
+- text: Sports, Books & More
+- img
+- link "Flights":
+  - /url: /travel/flights?otracker=nmenu_Flights
+- link "Offer Zone":
+  - /url: /offers-list/top-deals?screen=dynamic&pk=themeViews%3DDT-OMU-A2%3ADT-OMU~widgetType%3DdealCard~contentType%3Dneo&otracker=nmenu_offer-zone
+- text: Filters PICK A CATEGORY
+- img
+- link "Clothing and Accessories":
+  - /url: /clothing-and-accessories/pr?sid=clo&otracker=categorytree
+- img
+- link "Automotive Accessories":
+  - /url: /automotive-accessories/pr?sid=1mt&otracker=categorytree
+- img
+- link "Food Products":
+  - /url: /food-products/pr?sid=eat&otracker=categorytree
+- img
+- link "Vehicles":
+  - /url: /vehicles/pr?sid=7dk&otracker=categorytree
+- img
+- link "Books":
+  - /url: /books/pr?sid=bks&otracker=categorytree
+- text: Show 39 more categories
+- heading "All Categories" [level=1]
+- text: (Showing 1 – 40 products of 2,50,255 products) Sort By Popularity Price -- Low to High Price -- High to Low
+- link "LORSHEL Japanese Massage Gel - Non Greasy Texture, Daily Massage Use, Gel":
+  - /url: /lorshel-japanese-massage-gel-non-greasy-texture-daily-use/p/itm999a087c22d89?pid=BPRHG4GFNHFVHFKP&lid=LSTBPRHG4GFNHFVHFKPOW3NAC&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_1&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UW-8xbtsHZKYz7LLJ4aDmlY-Wt9UE7pqqb6zk-av94B0uP6yq0Yfxnc3_9X2yETzvfOD9j8KxZXAEtL92_Uh9e3&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "LORSHEL Japanese Massage Gel - Non Greasy Texture, Daily Massage Use, Gel"
+  - img
+- img
+- link "LORSHEL Japanese Massage Gel - Non Greasy Texture, Dail...":
+  - /url: /lorshel-japanese-massage-gel-non-greasy-texture-daily-use/p/itm999a087c22d89?pid=BPRHG4GFNHFVHFKP&lid=LSTBPRHG4GFNHFVHFKPOW3NAC&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_1&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UW-8xbtsHZKYz7LLJ4aDmlY-Wt9UE7pqqb6zk-av94B0uP6yq0Yfxnc3_9X2yETzvfOD9j8KxZXAEtL92_Uh9e3&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 100 g 3.9
+- img
+- text: (82)
+- link "₹135 ₹499 72% off":
+  - /url: /lorshel-japanese-massage-gel-non-greasy-texture-daily-use/p/itm999a087c22d89?pid=BPRHG4GFNHFVHFKP&lid=LSTBPRHG4GFNHFVHFKPOW3NAC&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_1&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UW-8xbtsHZKYz7LLJ4aDmlY-Wt9UE7pqqb6zk-av94B0uP6yq0Yfxnc3_9X2yETzvfOD9j8KxZXAEtL92_Uh9e3&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "SAYY Moroccan De-tan Brightening face pack for Advance Skin Renewal & Radiance":
+  - /url: /sayy-moroccan-de-tan-brightening-face-pack-advance-skin-renewal-radiance/p/itmbae3186819c6c?pid=FCPHK2FGMYYEYKSZ&lid=LSTFCPHK2FGMYYEYKSZKNTT5M&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_2&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UWMFXNPVbhMgPNWsqetlVMnAh4En7Nrt7rB6M7zaTYie4vUu0XRP5Z44Kc2h28pxsqX40R13OSruz63Glyigo7c&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "SAYY Moroccan De-tan Brightening face pack for Advance Skin Renewal & Radiance"
+  - img
+- img
+- link "SAYY Moroccan De-tan Brightening face pack for Advance ...":
+  - /url: /sayy-moroccan-de-tan-brightening-face-pack-advance-skin-renewal-radiance/p/itmbae3186819c6c?pid=FCPHK2FGMYYEYKSZ&lid=LSTFCPHK2FGMYYEYKSZKNTT5M&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_2&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UWMFXNPVbhMgPNWsqetlVMnAh4En7Nrt7rB6M7zaTYie4vUu0XRP5Z44Kc2h28pxsqX40R13OSruz63Glyigo7c&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 100 g 4.2
+- img
+- text: (33,593)
+- img
+- link "₹366 ₹699 47% off":
+  - /url: /sayy-moroccan-de-tan-brightening-face-pack-advance-skin-renewal-radiance/p/itmbae3186819c6c?pid=FCPHK2FGMYYEYKSZ&lid=LSTFCPHK2FGMYYEYKSZKNTT5M&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_2&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UWMFXNPVbhMgPNWsqetlVMnAh4En7Nrt7rB6M7zaTYie4vUu0XRP5Z44Kc2h28pxsqX40R13OSruz63Glyigo7c&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "ClayCo. Ginseng Cica Brightening Under Eye Cream Retinal Reduces Dark Circles Fine Lines":
+  - /url: /clayco-ginseng-cica-brightening-under-eye-cream-retinal-reduces-dark-circles-fine-lines/p/itm45df3c1991eb4?pid=ECMHGJ8AB9CKVH7W&lid=LSTECMHGJ8AB9CKVH7WBERTK7&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_3&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UW2JLcdAcldHgzFYCsCl2YMkPDsUTvxQaMGSUxsiQ9RyxpXNddxdPM-IwwkydhibaLOD9j8KxZXAEtL92_Uh9e3&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "ClayCo. Ginseng Cica Brightening Under Eye Cream Retinal Reduces Dark Circles Fine Lines"
+  - img
+- img
+- link "ClayCo. Ginseng Cica Brightening Under Eye Cream Retina...":
+  - /url: /clayco-ginseng-cica-brightening-under-eye-cream-retinal-reduces-dark-circles-fine-lines/p/itm45df3c1991eb4?pid=ECMHGJ8AB9CKVH7W&lid=LSTECMHGJ8AB9CKVH7WBERTK7&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_3&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UW2JLcdAcldHgzFYCsCl2YMkPDsUTvxQaMGSUxsiQ9RyxpXNddxdPM-IwwkydhibaLOD9j8KxZXAEtL92_Uh9e3&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 15 g 4.1
+- img
+- text: (201)
+- img
+- link "₹492 ₹799 38% off":
+  - /url: /clayco-ginseng-cica-brightening-under-eye-cream-retinal-reduces-dark-circles-fine-lines/p/itm45df3c1991eb4?pid=ECMHGJ8AB9CKVH7W&lid=LSTECMHGJ8AB9CKVH7WBERTK7&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_3&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UW2JLcdAcldHgzFYCsCl2YMkPDsUTvxQaMGSUxsiQ9RyxpXNddxdPM-IwwkydhibaLOD9j8KxZXAEtL92_Uh9e3&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "Humicure Hanging Absorber Packets Moisture Absorber":
+  - /url: /humicure-hanging-absorber-packets-moisture/p/itm0b2294f60ac3c?pid=MOAHF5F2ASV6KBAJ&lid=LSTMOAHF5F2ASV6KBAJEQ2HYN&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_4&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.MOAHF5F2ASV6KBAJ.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Humicure Hanging Absorber Packets Moisture Absorber"
+  - img
+- link "Humicure Hanging Absorber Packets Moisture Absorber":
+  - /url: /humicure-hanging-absorber-packets-moisture/p/itm0b2294f60ac3c?pid=MOAHF5F2ASV6KBAJ&lid=LSTMOAHF5F2ASV6KBAJEQ2HYN&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_4&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.MOAHF5F2ASV6KBAJ.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 3 4.3
+- img
+- text: (235)
+- img
+- link "₹290 ₹599 51% off":
+  - /url: /humicure-hanging-absorber-packets-moisture/p/itm0b2294f60ac3c?pid=MOAHF5F2ASV6KBAJ&lid=LSTMOAHF5F2ASV6KBAJEQ2HYN&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_4&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.MOAHF5F2ASV6KBAJ.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Only few left
+- link "Farmherbs 100% Herbal Kajal Stick for Adults":
+  - /url: /farmherbs-100-herbal-kajal-stick-adults/p/itmd57fabf4a2fe9?pid=KJLGG9HXYDSRWQKM&lid=LSTKJLGG9HXYDSRWQKMQ2TURT&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_5&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.KJLGG9HXYDSRWQKM.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Farmherbs 100% Herbal Kajal Stick for Adults"
+  - img
+- link "Farmherbs 100% Herbal Kajal Stick for Adults":
+  - /url: /farmherbs-100-herbal-kajal-stick-adults/p/itmd57fabf4a2fe9?pid=KJLGG9HXYDSRWQKM&lid=LSTKJLGG9HXYDSRWQKMQ2TURT&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_5&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.KJLGG9HXYDSRWQKM.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Black, 2.7 g 4.3
+- img
+- text: (2,093)
+- img
+- link "₹327 ₹365 10% off":
+  - /url: /farmherbs-100-herbal-kajal-stick-adults/p/itmd57fabf4a2fe9?pid=KJLGG9HXYDSRWQKM&lid=LSTKJLGG9HXYDSRWQKMQ2TURT&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_5&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.KJLGG9HXYDSRWQKM.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Only few left
+- link "sultan night Gathheal Capsule | Herbals & natural Ayurvedic Supplement | Lipoma Support |":
+  - /url: /sultan-night-gathheal-capsule-herbals-natural-ayurvedic-supplement-lipoma-support/p/itm3a587711b640a?pid=AYDHM6KMWG7HK6E5&lid=LSTAYDHM6KMWG7HK6E5RGYOY8&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_6&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UUGAuF6g_DmBr_Vl4iJ3yK-p3OFrKcqm3PuUPfBLW-Hg7NgmWJO4Q9xcQp2U8sCL-NhlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "sultan night Gathheal Capsule | Herbals & natural Ayurvedic Supplement | Lipoma Support |"
+  - img
+- img
+- link "sultan night Gathheal Capsule | Herbals & natural Ayurv...":
+  - /url: /sultan-night-gathheal-capsule-herbals-natural-ayurvedic-supplement-lipoma-support/p/itm3a587711b640a?pid=AYDHM6KMWG7HK6E5&lid=LSTAYDHM6KMWG7HK6E5RGYOY8&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_6&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UUGAuF6g_DmBr_Vl4iJ3yK-p3OFrKcqm3PuUPfBLW-Hg7NgmWJO4Q9xcQp2U8sCL-NhlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 30 Capsules 4.2
+- img
+- text: (5)
+- img
+- link "₹280 ₹2,499 88% off":
+  - /url: /sultan-night-gathheal-capsule-herbals-natural-ayurvedic-supplement-lipoma-support/p/itm3a587711b640a?pid=AYDHM6KMWG7HK6E5&lid=LSTAYDHM6KMWG7HK6E5RGYOY8&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_6&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UUGAuF6g_DmBr_Vl4iJ3yK-p3OFrKcqm3PuUPfBLW-Hg7NgmWJO4Q9xcQp2U8sCL-NhlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "Selsun Suspension Anti Dandruff Shampoo Liquid":
+  - /url: /selsun-suspension-anti-dandruff-shampoo-liquid/p/itmfefa919d4288c?pid=ALOH2Y3GA4AZ7Q7C&lid=LSTALOH2Y3GA4AZ7Q7CZRHWDJ&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_7&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ALOH2Y3GA4AZ7Q7C.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Selsun Suspension Anti Dandruff Shampoo Liquid"
+  - img
+- link "Selsun Suspension Anti Dandruff Shampoo Liquid":
+  - /url: /selsun-suspension-anti-dandruff-shampoo-liquid/p/itmfefa919d4288c?pid=ALOH2Y3GA4AZ7Q7C&lid=LSTALOH2Y3GA4AZ7Q7CZRHWDJ&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_7&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ALOH2Y3GA4AZ7Q7C.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 120 ml 4.3
+- img
+- text: (6,686)
+- img
+- link "₹387 ₹479 19% off":
+  - /url: /selsun-suspension-anti-dandruff-shampoo-liquid/p/itmfefa919d4288c?pid=ALOH2Y3GA4AZ7Q7C&lid=LSTALOH2Y3GA4AZ7Q7CZRHWDJ&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_7&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ALOH2Y3GA4AZ7Q7C.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "Dish TV Genuine Universal dish tv Remote Controller":
+  - /url: /dish-tv-genuine-universal-remote-controller/p/itmfag24qxgzk9xf?pid=REMFGNNESYH6ZTR4&lid=LSTREMFGNNESYH6ZTR42NS0BS&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_8&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.REMFGNNESYH6ZTR4.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Dish TV Genuine Universal dish tv Remote Controller"
+  - img
+- link "Dish TV Genuine Universal dish tv Remote Controller":
+  - /url: /dish-tv-genuine-universal-remote-controller/p/itmfag24qxgzk9xf?pid=REMFGNNESYH6ZTR4&lid=LSTREMFGNNESYH6ZTR42NS0BS&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_8&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.REMFGNNESYH6ZTR4.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: FAssured Genuine Product 4
+- img
+- text: (4,508)
+- img
+- link "₹198 ₹499 60% off":
+  - /url: /dish-tv-genuine-universal-remote-controller/p/itmfag24qxgzk9xf?pid=REMFGNNESYH6ZTR4&lid=LSTREMFGNNESYH6ZTR42NS0BS&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_8&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.REMFGNNESYH6ZTR4.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Only few left
+- link "LORSHEL Japanese Instant Pain Relief Soothing Massage Gel - Herbal Massage Gel, Premi... Gel":
+  - /url: /lorshel-japanese-instant-pain-relief-soothing-massage-gel-herbal-gel-premi/p/itm78d1624c82fd0?pid=BPRHFSEVDCZPXR5F&lid=LSTBPRHFSEVDCZPXR5FRSHFHK&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_9&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UXZooMF1TiwEq40_1Pr2AInLFqR0FegYJU43LTg1ZiCGmrqW15Vq3SB6QRfFwOebH1hlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "LORSHEL Japanese Instant Pain Relief Soothing Massage Gel - Herbal Massage Gel, Premi... Gel"
+  - img
+- img
+- link "LORSHEL Japanese Instant Pain Relief Soothing Massage G...":
+  - /url: /lorshel-japanese-instant-pain-relief-soothing-massage-gel-herbal-gel-premi/p/itm78d1624c82fd0?pid=BPRHFSEVDCZPXR5F&lid=LSTBPRHFSEVDCZPXR5FRSHFHK&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_9&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UXZooMF1TiwEq40_1Pr2AInLFqR0FegYJU43LTg1ZiCGmrqW15Vq3SB6QRfFwOebH1hlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 2 x 100 g 4
+- img
+- text: (27)
+- link "₹212 ₹699 69% off":
+  - /url: /lorshel-japanese-instant-pain-relief-soothing-massage-gel-herbal-gel-premi/p/itm78d1624c82fd0?pid=BPRHFSEVDCZPXR5F&lid=LSTBPRHFSEVDCZPXR5FRSHFHK&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_9&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UXZooMF1TiwEq40_1Pr2AInLFqR0FegYJU43LTg1ZiCGmrqW15Vq3SB6QRfFwOebH1hlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "Emolene Propylene Glycol (hydronourisher for dry skin) Cream":
+  - /url: /emolene-propylene-glycol-hydronourisher-dry-skin-cream/p/itm00a42f134e165?pid=ALOHHSG4JVDKVRBZ&lid=LSTALOHHSG4JVDKVRBZNJHHR9&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_10&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ALOHHSG4JVDKVRBZ.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Emolene Propylene Glycol (hydronourisher for dry skin) Cream"
+  - img
+- link "Emolene Propylene Glycol (hydronourisher for dry skin) ...":
+  - /url: /emolene-propylene-glycol-hydronourisher-dry-skin-cream/p/itm00a42f134e165?pid=ALOHHSG4JVDKVRBZ&lid=LSTALOHHSG4JVDKVRBZNJHHR9&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_10&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ALOHHSG4JVDKVRBZ.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 100 g 4.3
+- img
+- text: (6,765)
+- img
+- link "₹351 ₹391 10% off":
+  - /url: /emolene-propylene-glycol-hydronourisher-dry-skin-cream/p/itm00a42f134e165?pid=ALOHHSG4JVDKVRBZ&lid=LSTALOHHSG4JVDKVRBZNJHHR9&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_10&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ALOHHSG4JVDKVRBZ.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Only few left
+- link "Accutrust Smart Visual Ear Wax Cleaner with 5MP HD Camera, WiFi Connectivity Electric Ear Cleaner":
+  - /url: /accutrust-smart-visual-ear-wax-cleaner-5mp-hd-camera-wifi-connectivity-electric/p/itm0315faef11f13?pid=EECHGXCWFRH6XZHA&lid=LSTEECHGXCWFRH6XZHAISPLFA&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_11&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UWbERYv96NWGZLTNcnbzNmjQiwKe-HEkuiw_968nx6YkMvMFbcQU5VKdoLmAcxsRwPA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Accutrust Smart Visual Ear Wax Cleaner with 5MP HD Camera, WiFi Connectivity Electric Ear Cleaner"
+  - img
+- img
+- link "Accutrust Smart Visual Ear Wax Cleaner with 5MP HD Came...":
+  - /url: /accutrust-smart-visual-ear-wax-cleaner-5mp-hd-camera-wifi-connectivity-electric/p/itm0315faef11f13?pid=EECHGXCWFRH6XZHA&lid=LSTEECHGXCWFRH6XZHAISPLFA&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_11&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UWbERYv96NWGZLTNcnbzNmjQiwKe-HEkuiw_968nx6YkMvMFbcQU5VKdoLmAcxsRwPA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: "4.2"
+- img
+- text: (1,002)
+- img
+- link "₹510 ₹1,299 60% off":
+  - /url: /accutrust-smart-visual-ear-wax-cleaner-5mp-hd-camera-wifi-connectivity-electric/p/itm0315faef11f13?pid=EECHGXCWFRH6XZHA&lid=LSTEECHGXCWFRH6XZHAISPLFA&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_11&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UWbERYv96NWGZLTNcnbzNmjQiwKe-HEkuiw_968nx6YkMvMFbcQU5VKdoLmAcxsRwPA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "axenza Japanese Pain Relief Gel Muscle Joint Pain Relief Fast Absorbing Gel":
+  - /url: /axenza-japanese-pain-relief-gel-muscle-joint-fast-absorbing/p/itmcbb6eb7ffb4f5?pid=BPRHMPHNGKWEB7E7&lid=LSTBPRHMPHNGKWEB7E7ASIGQV&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_12&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UV_GQ8FwcemghUk_4xYVyDX9f5k9OW8tl5bZ2Ogkrqx5g03BvnmzE4yBQ82gkmcfrrA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "axenza Japanese Pain Relief Gel Muscle Joint Pain Relief Fast Absorbing Gel"
+  - img
+- img
+- link "axenza Japanese Pain Relief Gel Muscle Joint Pain Relie...":
+  - /url: /axenza-japanese-pain-relief-gel-muscle-joint-fast-absorbing/p/itmcbb6eb7ffb4f5?pid=BPRHMPHNGKWEB7E7&lid=LSTBPRHMPHNGKWEB7E7ASIGQV&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_12&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UV_GQ8FwcemghUk_4xYVyDX9f5k9OW8tl5bZ2Ogkrqx5g03BvnmzE4yBQ82gkmcfrrA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 2 x 100 g 4.7
+- img
+- text: (58)
+- img
+- link "₹158 ₹699 77% off":
+  - /url: /axenza-japanese-pain-relief-gel-muscle-joint-fast-absorbing/p/itmcbb6eb7ffb4f5?pid=BPRHMPHNGKWEB7E7&lid=LSTBPRHMPHNGKWEB7E7ASIGQV&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_12&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UV_GQ8FwcemghUk_4xYVyDX9f5k9OW8tl5bZ2Ogkrqx5g03BvnmzE4yBQ82gkmcfrrA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "Mi Original Mi X Pro, X series, Mi 5A Voice Remote Control with Google for Android (Bluetooth Remote) For Device Mi Android TV, Mi tv, Xiaomi Redmi Mi Smart Tv, MI Smart TV 4A Remote Controller":
+  - /url: /mi-original-x-pro-series-5a-voice-remote-control-google-android-bluetooth-remote-device-tv-xiaomi-redmi-smart-tv-4a-controller/p/itmaaf3796ab4892?pid=REMHHEYZWRQV9Q7S&lid=LSTREMHHEYZWRQV9Q7S8KCNP3&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_13&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.REMHHEYZWRQV9Q7S.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Mi Original Mi X Pro, X series, Mi 5A Voice Remote Control with Google for Android (Bluetooth Remote) For Device Mi Android TV, Mi tv, Xiaomi Redmi Mi Smart Tv, MI Smart TV 4A Remote Controller"
+  - img
+- link "Mi Original Mi X Pro, X series, Mi 5A Voice Remote Cont...":
+  - /url: /mi-original-x-pro-series-5a-voice-remote-control-google-android-bluetooth-remote-device-tv-xiaomi-redmi-smart-tv-4a-controller/p/itmaaf3796ab4892?pid=REMHHEYZWRQV9Q7S&lid=LSTREMHHEYZWRQV9Q7S8KCNP3&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_13&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.REMHHEYZWRQV9Q7S.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Black 4.1
+- img
+- text: (488)
+- link "₹280 ₹999 71% off":
+  - /url: /mi-original-x-pro-series-5a-voice-remote-control-google-android-bluetooth-remote-device-tv-xiaomi-redmi-smart-tv-4a-controller/p/itmaaf3796ab4892?pid=REMHHEYZWRQV9Q7S&lid=LSTREMHHEYZWRQV9Q7S8KCNP3&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_13&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.REMHHEYZWRQV9Q7S.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Only few left
+- link "Niconi Gluta-Kojic Instant Tan Removal & Tan Vanish With Glutathione, For All Type Skin":
+  - /url: /niconi-gluta-kojic-instant-tan-removal-vanish-glutathione-all-type-skin/p/itm77490a7c496a5?pid=FCPHC6UYUM4NRRNY&lid=LSTFCPHC6UYUM4NRRNYVUFEW1&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_14&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.FCPHC6UYUM4NRRNY.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Niconi Gluta-Kojic Instant Tan Removal & Tan Vanish With Glutathione, For All Type Skin"
+  - img
+- link "Niconi Gluta-Kojic Instant Tan Removal & Tan Vanish Wit...":
+  - /url: /niconi-gluta-kojic-instant-tan-removal-vanish-glutathione-all-type-skin/p/itm77490a7c496a5?pid=FCPHC6UYUM4NRRNY&lid=LSTFCPHC6UYUM4NRRNYVUFEW1&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_14&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.FCPHC6UYUM4NRRNY.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 180 g 3.9
+- img
+- text: (19,536)
+- img
+- link "₹1,396 ₹1,399":
+  - /url: /niconi-gluta-kojic-instant-tan-removal-vanish-glutathione-all-type-skin/p/itm77490a7c496a5?pid=FCPHC6UYUM4NRRNY&lid=LSTFCPHC6UYUM4NRRNYVUFEW1&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_14&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.FCPHC6UYUM4NRRNY.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "Ridoy Foot Pads Original | Advanced Foot Care - Assists in Maintaining Foot Hygiene & Plaster & Patch":
+  - /url: /ridoy-foot-pads-original-advanced-care-assists-maintaining-hygiene-plaster-patch/p/itmd0b1286a0d968?pid=BPRHMGD3JZKWUPYH&lid=LSTBPRHMGD3JZKWUPYHKRW83P&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_15&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UXpgVBM96MV5ZywRF8YmJxDzkUoWkL0KCipE5_cXUxpstp114py2EKeGJERP5ZEJhXA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Ridoy Foot Pads Original | Advanced Foot Care - Assists in Maintaining Foot Hygiene & Plaster & Patch"
+  - img
+- img
+- link "Ridoy Foot Pads Original | Advanced Foot Care - Assists...":
+  - /url: /ridoy-foot-pads-original-advanced-care-assists-maintaining-hygiene-plaster-patch/p/itmd0b1286a0d968?pid=BPRHMGD3JZKWUPYH&lid=LSTBPRHMGD3JZKWUPYHKRW83P&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_15&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UXpgVBM96MV5ZywRF8YmJxDzkUoWkL0KCipE5_cXUxpstp114py2EKeGJERP5ZEJhXA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 10 Patches 4.1
+- img
+- text: (277)
+- link "₹64 ₹499 87% off":
+  - /url: /ridoy-foot-pads-original-advanced-care-assists-maintaining-hygiene-plaster-patch/p/itmd0b1286a0d968?pid=BPRHMGD3JZKWUPYH&lid=LSTBPRHMGD3JZKWUPYHKRW83P&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_15&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UXpgVBM96MV5ZywRF8YmJxDzkUoWkL0KCipE5_cXUxpstp114py2EKeGJERP5ZEJhXA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "Kapiva Artho Sure Juice – 1L | Ayurvedic Joint Pain Relief for Arthritis & Knee Pain":
+  - /url: /kapiva-artho-sure-juice-1l-ayurvedic-joint-pain-relief-arthritis-knee/p/itm258e0340db114?pid=AYDHJV6AWTYCZJCE&lid=LSTAYDHJV6AWTYCZJCEMN0RQU&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_16&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.AYDHJV6AWTYCZJCE.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Kapiva Artho Sure Juice – 1L | Ayurvedic Joint Pain Relief for Arthritis & Knee Pain"
+  - img
+- link "Kapiva Artho Sure Juice – 1L | Ayurvedic Joint Pain Rel...":
+  - /url: /kapiva-artho-sure-juice-1l-ayurvedic-joint-pain-relief-arthritis-knee/p/itm258e0340db114?pid=AYDHJV6AWTYCZJCE&lid=LSTAYDHJV6AWTYCZJCEMN0RQU&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_16&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.AYDHJV6AWTYCZJCE.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 1000 ml 4.4
+- img
+- text: (168)
+- img
+- link "₹809 ₹899 10% off":
+  - /url: /kapiva-artho-sure-juice-1l-ayurvedic-joint-pain-relief-arthritis-knee/p/itm258e0340db114?pid=AYDHJV6AWTYCZJCE&lid=LSTAYDHJV6AWTYCZJCEMN0RQU&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_16&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.AYDHJV6AWTYCZJCE.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "Krishna's Herbal & Ayurveda Diabic Care Juice | Helps Manage Blood Sugar | Boosts Metabolism and Improves Digestion | Stimulate Insulin Secretion | Helps Manage Weight":
+  - /url: /krishna-s-herbal-ayurveda-diabic-care-juice-helps-manage-blood-sugar-boosts-metabolism-improves-digestion-stimulate-insulin-secretion-weight/p/itm2f6fe87382435?pid=AYDFWYWFQK4FYDXC&lid=LSTAYDFWYWFQK4FYDXCN59ZB8&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_17&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UVPbRILPEDLtAIiAMAbvPURq_GFzRmz4GKxN8zYzXrXnPdIthRce_5Ii1mZF5ZGOf9hlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Krishna's Herbal & Ayurveda Diabic Care Juice | Helps Manage Blood Sugar | Boosts Metabolism and Improves Digestion | Stimulate Insulin Secretion | Helps Manage Weight"
+  - img
+- img
+- link "Krishna's Herbal & Ayurveda Diabic Care Juice | Helps M...":
+  - /url: /krishna-s-herbal-ayurveda-diabic-care-juice-helps-manage-blood-sugar-boosts-metabolism-improves-digestion-stimulate-insulin-secretion-weight/p/itm2f6fe87382435?pid=AYDFWYWFQK4FYDXC&lid=LSTAYDFWYWFQK4FYDXCN59ZB8&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_17&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UVPbRILPEDLtAIiAMAbvPURq_GFzRmz4GKxN8zYzXrXnPdIthRce_5Ii1mZF5ZGOf9hlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 500 ml 4.3
+- img
+- text: (49,465)
+- img
+- link "₹243":
+  - /url: /krishna-s-herbal-ayurveda-diabic-care-juice-helps-manage-blood-sugar-boosts-metabolism-improves-digestion-stimulate-insulin-secretion-weight/p/itm2f6fe87382435?pid=AYDFWYWFQK4FYDXC&lid=LSTAYDFWYWFQK4FYDXCN59ZB8&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_17&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UVPbRILPEDLtAIiAMAbvPURq_GFzRmz4GKxN8zYzXrXnPdIthRce_5Ii1mZF5ZGOf9hlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "Ridoy Ayurvedic Herbs sugar patch | Essential Diabetic Patch Wellness Edition - Ideal Plaster & Patch":
+  - /url: /ridoy-ayurvedic-herbs-sugar-patch-essential-diabetic-wellness-ideal-plaster/p/itm152b3bbc8859c?pid=BPRHHJYTBGFJQFQS&lid=LSTBPRHHJYTBGFJQFQS0NXTAF&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_18&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UW1UBKQFv6lf340fvym-YoaiYn8EuyUoMCY3zrgYUTcXhQ6RRRGXEgRjrHfw9TuIRLA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Ridoy Ayurvedic Herbs sugar patch | Essential Diabetic Patch Wellness Edition - Ideal Plaster & Patch"
+  - img
+- img
+- link "Ridoy Ayurvedic Herbs sugar patch | Essential Diabetic ...":
+  - /url: /ridoy-ayurvedic-herbs-sugar-patch-essential-diabetic-wellness-ideal-plaster/p/itm152b3bbc8859c?pid=BPRHHJYTBGFJQFQS&lid=LSTBPRHHJYTBGFJQFQS0NXTAF&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_18&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UW1UBKQFv6lf340fvym-YoaiYn8EuyUoMCY3zrgYUTcXhQ6RRRGXEgRjrHfw9TuIRLA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 10 Patches 4.5
+- img
+- text: (204)
+- link "₹84 ₹299 71% off":
+  - /url: /ridoy-ayurvedic-herbs-sugar-patch-essential-diabetic-wellness-ideal-plaster/p/itm152b3bbc8859c?pid=BPRHHJYTBGFJQFQS&lid=LSTBPRHHJYTBGFJQFQS0NXTAF&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_18&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UW1UBKQFv6lf340fvym-YoaiYn8EuyUoMCY3zrgYUTcXhQ6RRRGXEgRjrHfw9TuIRLA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "Flipkart SmartBuy Tempered Glass Guard for DJI Mini 3 Fly More Combo DJI RC, Drones with Camera for Adults 4K":
+  - /url: /flipkart-smartbuy-tempered-glass-guard-dji-mini-3-fly-more-combo-rc-drones-camera-adults-4k/p/itm09e04d7c99d84?pid=ACCHZSRBYMX4WEXV&lid=LSTACCHZSRBYMX4WEXVLJHCZO&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_19&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ACCHZSRBYMX4WEXV.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Flipkart SmartBuy Tempered Glass Guard for DJI Mini 3 Fly More Combo DJI RC, Drones with Camera for Adults 4K"
+  - img
+- link "Flipkart SmartBuy Tempered Glass Guard for DJI Mini 3 F...":
+  - /url: /flipkart-smartbuy-tempered-glass-guard-dji-mini-3-fly-more-combo-rc-drones-camera-adults-4k/p/itm09e04d7c99d84?pid=ACCHZSRBYMX4WEXV&lid=LSTACCHZSRBYMX4WEXVLJHCZO&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_19&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ACCHZSRBYMX4WEXV.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Pack of 1 3.6
+- img
+- text: (38)
+- img
+- link "₹144 ₹599 75% off":
+  - /url: /flipkart-smartbuy-tempered-glass-guard-dji-mini-3-fly-more-combo-rc-drones-camera-adults-4k/p/itm09e04d7c99d84?pid=ACCHZSRBYMX4WEXV&lid=LSTACCHZSRBYMX4WEXVLJHCZO&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_19&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ACCHZSRBYMX4WEXV.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Only few left
+- link "ganpati traders Joint Pain Relief Rubber Hot Water Bottle/Bag Non-Electric 2 L Hot Water Bag (Multicolor) Non-Electrical 2 L Hot Water Bag (Multicolor)3 NON-ELECTRIC 2 L Hot Water Bag":
+  - /url: /ganpati-traders-joint-pain-relief-rubber-hot-water-bottle-bag-non-electric-2-l-bag-multicolor-non-electrical-multicolor-3/p/itm59808f094fafd?pid=HWBG69MXFHZKYQCK&lid=LSTHWBG69MXFHZKYQCKXYJWSE&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_20&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.HWBG69MXFHZKYQCK.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "ganpati traders Joint Pain Relief Rubber Hot Water Bottle/Bag Non-Electric 2 L Hot Water Bag (Multicolor) Non-Electrical 2 L Hot Water Bag (Multicolor)3 NON-ELECTRIC 2 L Hot Water Bag"
+  - img
+- link "ganpati traders Joint Pain Relief Rubber Hot Water Bott...":
+  - /url: /ganpati-traders-joint-pain-relief-rubber-hot-water-bottle-bag-non-electric-2-l-bag-multicolor-non-electrical-multicolor-3/p/itm59808f094fafd?pid=HWBG69MXFHZKYQCK&lid=LSTHWBG69MXFHZKYQCKXYJWSE&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_20&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.HWBG69MXFHZKYQCK.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Green 4.2
+- img
+- text: (4,041)
+- img
+- link "₹142 ₹499 71% off":
+  - /url: /ganpati-traders-joint-pain-relief-rubber-hot-water-bottle-bag-non-electric-2-l-bag-multicolor-non-electrical-multicolor-3/p/itm59808f094fafd?pid=HWBG69MXFHZKYQCK&lid=LSTHWBG69MXFHZKYQCKXYJWSE&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_20&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.HWBG69MXFHZKYQCK.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "SOFTSPUN Microfiber Vehicle Washing Cloth":
+  - /url: /softspun-microfiber-vehicle-washing-cloth/p/itma0f6eda002f02?pid=VWCHY3STFFFZBS6C&lid=LSTVWCHY3STFFFZBS6CROI27F&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_21&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UVwskLTkJHpwoJ6HP_tPjljZKbIdRcnCs0QcFCFXx_PPE0cPqe_4xZ5qXI-gx3b0YhhlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "SOFTSPUN Microfiber Vehicle Washing Cloth"
+  - img
+- img
+- link "SOFTSPUN Microfiber Vehicle Washing Cloth":
+  - /url: /softspun-microfiber-vehicle-washing-cloth/p/itma0f6eda002f02?pid=VWCHY3STFFFZBS6C&lid=LSTVWCHY3STFFFZBS6CROI27F&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_21&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UVwskLTkJHpwoJ6HP_tPjljZKbIdRcnCs0QcFCFXx_PPE0cPqe_4xZ5qXI-gx3b0YhhlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Pack Of 2, 340 GSM 4.2
+- img
+- text: (1,31,349)
+- img
+- link "₹97 ₹355 72% off":
+  - /url: /softspun-microfiber-vehicle-washing-cloth/p/itma0f6eda002f02?pid=VWCHY3STFFFZBS6C&lid=LSTVWCHY3STFFFZBS6CROI27F&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_21&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UVwskLTkJHpwoJ6HP_tPjljZKbIdRcnCs0QcFCFXx_PPE0cPqe_4xZ5qXI-gx3b0YhhlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "ZORIADA Pack of 3 in 1 (1 Pcs Air fryer, 1 Set- Oil brush, 1 Set oven meat ) Airfryer Tray":
+  - /url: /zoriada-pack-3-1-1-pcs-air-fryer-set-oil-brush-set-oven-meat-airfryer-tray/p/itmbed72962c4275?pid=AFTGPFMFSQW6UEUD&lid=LSTAFTGPFMFSQW6UEUDEXTLEB&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_22&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UXbkWF98J-PjZagLlp7ga7nH0b6vEsXu9y533Ey2-nE607f3l1SxOjBZqqzbS9twTfA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "ZORIADA Pack of 3 in 1 (1 Pcs Air fryer, 1 Set- Oil brush, 1 Set oven meat ) Airfryer Tray"
+  - img
+- img
+- link "ZORIADA Pack of 3 in 1 (1 Pcs Air fryer, 1 Set- Oil bru...":
+  - /url: /zoriada-pack-3-1-1-pcs-air-fryer-set-oil-brush-set-oven-meat-airfryer-tray/p/itmbed72962c4275?pid=AFTGPFMFSQW6UEUD&lid=LSTAFTGPFMFSQW6UEUDEXTLEB&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_22&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UXbkWF98J-PjZagLlp7ga7nH0b6vEsXu9y533Ey2-nE607f3l1SxOjBZqqzbS9twTfA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: "3.8"
+- img
+- text: (660)
+- link "₹194 ₹999 80% off":
+  - /url: /zoriada-pack-3-1-1-pcs-air-fryer-set-oil-brush-set-oven-meat-airfryer-tray/p/itmbed72962c4275?pid=AFTGPFMFSQW6UEUD&lid=LSTAFTGPFMFSQW6UEUDEXTLEB&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_22&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UXbkWF98J-PjZagLlp7ga7nH0b6vEsXu9y533Ey2-nE607f3l1SxOjBZqqzbS9twTfA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "Smart Weigh Personal Body Weighing Scale with LCD Screen weigh scale Anti-Skid Glass Machine Weighing Scale":
+  - /url: /smart-weigh-personal-body-weighing-scale-lcd-screen-anti-skid-glass-machine/p/itm1debc5d8a427f?pid=WSLHN93R3HDHZVHV&lid=LSTWSLHN93R3HDHZVHVGC1P24&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_23&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.WSLHN93R3HDHZVHV.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Smart Weigh Personal Body Weighing Scale with LCD Screen weigh scale Anti-Skid Glass Machine Weighing Scale"
+  - img
+- link "Smart Weigh Personal Body Weighing Scale with LCD Scree...":
+  - /url: /smart-weigh-personal-body-weighing-scale-lcd-screen-anti-skid-glass-machine/p/itm1debc5d8a427f?pid=WSLHN93R3HDHZVHV&lid=LSTWSLHN93R3HDHZVHVGC1P24&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_23&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.WSLHN93R3HDHZVHV.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Black 4.5
+- img
+- text: (27)
+- img
+- link "₹408 ₹1,599 74% off":
+  - /url: /smart-weigh-personal-body-weighing-scale-lcd-screen-anti-skid-glass-machine/p/itm1debc5d8a427f?pid=WSLHN93R3HDHZVHV&lid=LSTWSLHN93R3HDHZVHVGC1P24&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_23&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.WSLHN93R3HDHZVHV.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Super Deals
+- link "airtech Strong metal Black tripod stand with ring light for phography and video Ring Flash":
+  - /url: /airtech-strong-metal-black-tripod-stand-ring-light-phography-video-flash/p/itm1469c7da7cdde?pid=ACCGE7FB895669UV&lid=LSTACCGE7FB895669UVTVLWBB&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_24&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ACCGE7FB895669UV.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "airtech Strong metal Black tripod stand with ring light for phography and video Ring Flash"
+  - img
+- link "airtech Strong metal Black tripod stand with ring light...":
+  - /url: /airtech-strong-metal-black-tripod-stand-ring-light-phography-video-flash/p/itm1469c7da7cdde?pid=ACCGE7FB895669UV&lid=LSTACCGE7FB895669UVTVLWBB&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_24&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ACCGE7FB895669UV.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Black 3.8
+- img
+- text: (20,510)
+- link "₹656 ₹2,019 67% off":
+  - /url: /airtech-strong-metal-black-tripod-stand-ring-light-phography-video-flash/p/itm1469c7da7cdde?pid=ACCGE7FB895669UV&lid=LSTACCGE7FB895669UVTVLWBB&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_24&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ACCGE7FB895669UV.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Only few left
+- link "Aqua Frisch Prime Audi 18 L RO + UV + UF + Copper + TDS Control Water Purifier":
+  - /url: /aqua-frisch-prime-audi-18-l-ro-uv-uf-copper-tds-control-water-purifier/p/itm25c6121ce896f?pid=WAPHMGNKB6T9FSZH&lid=LSTWAPHMGNKB6T9FSZHXHJSSI&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_25&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UUSUbqhRFWBDsI2PlG-hj20wfePxE7G5SZogK1E9dUKkrxylZkfxAVNrvpcwo0tjBJhlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Aqua Frisch Prime Audi 18 L RO + UV + UF + Copper + TDS Control Water Purifier"
+  - img
+- img
+- link "Aqua Frisch Prime Audi 18 L RO + UV + UF + Copper + TDS...":
+  - /url: /aqua-frisch-prime-audi-18-l-ro-uv-uf-copper-tds-control-water-purifier/p/itm25c6121ce896f?pid=WAPHMGNKB6T9FSZH&lid=LSTWAPHMGNKB6T9FSZHXHJSSI&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_25&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UUSUbqhRFWBDsI2PlG-hj20wfePxE7G5SZogK1E9dUKkrxylZkfxAVNrvpcwo0tjBJhlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Black 4.3
+- img
+- text: (699)
+- img
+- link "₹3,628 ₹20,000 81% off":
+  - /url: /aqua-frisch-prime-audi-18-l-ro-uv-uf-copper-tds-control-water-purifier/p/itm25c6121ce896f?pid=WAPHMGNKB6T9FSZH&lid=LSTWAPHMGNKB6T9FSZHXHJSSI&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_25&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UUSUbqhRFWBDsI2PlG-hj20wfePxE7G5SZogK1E9dUKkrxylZkfxAVNrvpcwo0tjBJhlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Value 365
+- link "Alps Goodness Rosemary Water for Hair Growth, Hair Spray to Promote Regrowth & Reduce Hairfall":
+  - /url: /alps-goodness-rosemary-water-hair-growth-spray-promote-regrowth-reduce-hairfall/p/itm4fa3102b68167?pid=HTTHZW4EVAVCJKHY&lid=LSTHTTHZW4EVAVCJKHYIST8PD&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_26&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.HTTHZW4EVAVCJKHY.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Alps Goodness Rosemary Water for Hair Growth, Hair Spray to Promote Regrowth & Reduce Hairfall"
+  - img
+- link "Alps Goodness Rosemary Water for Hair Growth, Hair Spra...":
+  - /url: /alps-goodness-rosemary-water-hair-growth-spray-promote-regrowth-reduce-hairfall/p/itm4fa3102b68167?pid=HTTHZW4EVAVCJKHY&lid=LSTHTTHZW4EVAVCJKHYIST8PD&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_26&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.HTTHZW4EVAVCJKHY.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 250 ml 4.3
+- img
+- text: (273)
+- img
+- link "₹359 ₹425 15% off":
+  - /url: /alps-goodness-rosemary-water-hair-growth-spray-promote-regrowth-reduce-hairfall/p/itm4fa3102b68167?pid=HTTHZW4EVAVCJKHY&lid=LSTHTTHZW4EVAVCJKHYIST8PD&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_26&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.HTTHZW4EVAVCJKHY.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "Krishna's Herbal & Ayurveda Sciatifix Herbal Juice Good Source of Calcium | Strengthens Bones and Muscles":
+  - /url: /krishna-s-herbal-ayurveda-sciatifix-juice-good-source-calcium-strengthens-bones-muscles/p/itma30f956e00a70?pid=AYDH5F6AYBFF76PY&lid=LSTAYDH5F6AYBFF76PYFABEHO&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_27&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UXgucUK4orAX3Xxnje7_y-R0YtkVw_WUKohibkZMV8C15GnTes7dG_Qry3xM3csbXZhlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Krishna's Herbal & Ayurveda Sciatifix Herbal Juice Good Source of Calcium | Strengthens Bones and Muscles"
+  - img
+- img
+- link "Krishna's Herbal & Ayurveda Sciatifix Herbal Juice Good...":
+  - /url: /krishna-s-herbal-ayurveda-sciatifix-juice-good-source-calcium-strengthens-bones-muscles/p/itma30f956e00a70?pid=AYDH5F6AYBFF76PY&lid=LSTAYDH5F6AYBFF76PYFABEHO&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_27&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UXgucUK4orAX3Xxnje7_y-R0YtkVw_WUKohibkZMV8C15GnTes7dG_Qry3xM3csbXZhlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 1000 ml 4.1
+- img
+- text: (2,431)
+- img
+- link "₹430 ₹478 10% off":
+  - /url: /krishna-s-herbal-ayurveda-sciatifix-juice-good-source-calcium-strengthens-bones-muscles/p/itma30f956e00a70?pid=AYDH5F6AYBFF76PY&lid=LSTAYDH5F6AYBFF76PYFABEHO&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_27&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UXgucUK4orAX3Xxnje7_y-R0YtkVw_WUKohibkZMV8C15GnTes7dG_Qry3xM3csbXZhlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "VitaVedik Rosemary Dried Leaves for Hair Growth with Mist Spray & Hair Oil Applicator":
+  - /url: /vitavedik-rosemary-dried-leaves-hair-growth-mist-spray-oil-applicator/p/itm54db4e9216c49?pid=HASHJH6XYWDNZFJU&lid=LSTHASHJH6XYWDNZFJUWYR3EA&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_28&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UUQug0ZTE4aUlI8gcSG2MOZUosoO_UH2_fsF2oVKZhLyF_3oX_js4W-YgiYAkYVeFPA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "VitaVedik Rosemary Dried Leaves for Hair Growth with Mist Spray & Hair Oil Applicator"
+  - img
+- img
+- link "VitaVedik Rosemary Dried Leaves for Hair Growth with Mi...":
+  - /url: /vitavedik-rosemary-dried-leaves-hair-growth-mist-spray-oil-applicator/p/itm54db4e9216c49?pid=HASHJH6XYWDNZFJU&lid=LSTHASHJH6XYWDNZFJUWYR3EA&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_28&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UUQug0ZTE4aUlI8gcSG2MOZUosoO_UH2_fsF2oVKZhLyF_3oX_js4W-YgiYAkYVeFPA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 100 g 4.2
+- img
+- text: (4,638)
+- img
+- link "₹146 ₹369 60% off":
+  - /url: /vitavedik-rosemary-dried-leaves-hair-growth-mist-spray-oil-applicator/p/itm54db4e9216c49?pid=HASHJH6XYWDNZFJU&lid=LSTHASHJH6XYWDNZFJUWYR3EA&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_28&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UUQug0ZTE4aUlI8gcSG2MOZUosoO_UH2_fsF2oVKZhLyF_3oX_js4W-YgiYAkYVeFPA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "mushroomex Mushroom Powder":
+  - /url: /mushroomex-mushroom-powder/p/itmd838283d87952?pid=AYDFWHJHFHQQSHKS&lid=LSTAYDFWHJHFHQQSHKSKVBQCC&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_29&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.AYDFWHJHFHQQSHKS.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "mushroomex Mushroom Powder"
+  - img
+- link "mushroomex Mushroom Powder":
+  - /url: /mushroomex-mushroom-powder/p/itmd838283d87952?pid=AYDFWHJHFHQQSHKS&lid=LSTAYDFWHJHFHQQSHKSKVBQCC&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_29&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.AYDFWHJHFHQQSHKS.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 100 4.1
+- img
+- text: (8,984)
+- link "₹332 ₹399 16% off":
+  - /url: /mushroomex-mushroom-powder/p/itmd838283d87952?pid=AYDFWHJHFHQQSHKS&lid=LSTAYDFWHJHFHQQSHKSKVBQCC&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_29&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.AYDFWHJHFHQQSHKS.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Only few left
+- link "NIBAR Screen Cleaner Gel for Computers, Laptops, Mobiles, Gaming":
+  - /url: /nibar-screen-cleaner-gel-computers-laptops-mobiles-gaming/p/itm89ddd3a66d43e?pid=CLKGHQYZRMGAVAYQ&lid=LSTCLKGHQYZRMGAVAYQGPG26U&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_30&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.CLKGHQYZRMGAVAYQ.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "NIBAR Screen Cleaner Gel for Computers, Laptops, Mobiles, Gaming"
+  - img
+- link "NIBAR Screen Cleaner Gel for Computers, Laptops, Mobile...":
+  - /url: /nibar-screen-cleaner-gel-computers-laptops-mobiles-gaming/p/itm89ddd3a66d43e?pid=CLKGHQYZRMGAVAYQ&lid=LSTCLKGHQYZRMGAVAYQGPG26U&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_30&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.CLKGHQYZRMGAVAYQ.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: NB003 4
+- img
+- text: (1,593)
+- link "₹142 ₹587 75% off":
+  - /url: /nibar-screen-cleaner-gel-computers-laptops-mobiles-gaming/p/itm89ddd3a66d43e?pid=CLKGHQYZRMGAVAYQ&lid=LSTCLKGHQYZRMGAVAYQGPG26U&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_30&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.CLKGHQYZRMGAVAYQ.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Only few left
+- link "CRETO Heating Pad Gel Full Body Pain Reliever Electric 1 L Hot Water Bag":
+  - /url: /creto-heating-pad-gel-full-body-pain-reliever-electric-1-l-hot-water-bag/p/itm2606185731806?pid=HWBGVYEZ5ZZDGMQQ&lid=LSTHWBGVYEZ5ZZDGMQQ8C1O9D&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_31&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UX8YklmPEUk66vvH8V1qWoNttkMp1tBal5rIvk_wxxj0WvjS91PuAubFXXLayjhMivA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "CRETO Heating Pad Gel Full Body Pain Reliever Electric 1 L Hot Water Bag"
+  - img
+- img
+- link "CRETO Heating Pad Gel Full Body Pain Reliever Electric ...":
+  - /url: /creto-heating-pad-gel-full-body-pain-reliever-electric-1-l-hot-water-bag/p/itm2606185731806?pid=HWBGVYEZ5ZZDGMQQ&lid=LSTHWBGVYEZ5ZZDGMQQ8C1O9D&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_31&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UX8YklmPEUk66vvH8V1qWoNttkMp1tBal5rIvk_wxxj0WvjS91PuAubFXXLayjhMivA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Multicolor 4.3
+- img
+- text: (30,856)
+- img
+- link "₹175 ₹999 82% off":
+  - /url: /creto-heating-pad-gel-full-body-pain-reliever-electric-1-l-hot-water-bag/p/itm2606185731806?pid=HWBGVYEZ5ZZDGMQQ&lid=LSTHWBGVYEZ5ZZDGMQQ8C1O9D&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_31&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UX8YklmPEUk66vvH8V1qWoNttkMp1tBal5rIvk_wxxj0WvjS91PuAubFXXLayjhMivA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "Krishna's Herbal & Ayurveda Natural Thyroid Care Juice | Rich Source of Vitamins, Minerals & Fiber":
+  - /url: /krishna-s-herbal-ayurveda-natural-thyroid-care-juice-rich-source-vitamins-minerals-fiber/p/itm6bb9e7ca52b65?pid=AYDGG7RRHBPTMTFP&lid=LSTAYDGG7RRHBPTMTFPWHRGRN&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_32&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UWlPeZlhZ6qeRJRNI560ICPhMLdub_9Np4XJmwmb29JY_eq5qI6vA43ZlRralPT_U1hlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Krishna's Herbal & Ayurveda Natural Thyroid Care Juice | Rich Source of Vitamins, Minerals & Fiber"
+  - img
+- img
+- link "Krishna's Herbal & Ayurveda Natural Thyroid Care Juice ...":
+  - /url: /krishna-s-herbal-ayurveda-natural-thyroid-care-juice-rich-source-vitamins-minerals-fiber/p/itm6bb9e7ca52b65?pid=AYDGG7RRHBPTMTFP&lid=LSTAYDGG7RRHBPTMTFPWHRGRN&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_32&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UWlPeZlhZ6qeRJRNI560ICPhMLdub_9Np4XJmwmb29JY_eq5qI6vA43ZlRralPT_U1hlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 1000 ml 4.3
+- img
+- text: (5,196)
+- img
+- link "₹463 ₹515 10% off":
+  - /url: /krishna-s-herbal-ayurveda-natural-thyroid-care-juice-rich-source-vitamins-minerals-fiber/p/itm6bb9e7ca52b65?pid=AYDGG7RRHBPTMTFP&lid=LSTAYDGG7RRHBPTMTFPWHRGRN&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_32&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UWlPeZlhZ6qeRJRNI560ICPhMLdub_9Np4XJmwmb29JY_eq5qI6vA43ZlRralPT_U1hlHixw1jGMNB55dKA0ZA0&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "FLIXY DermDoc night cream":
+  - /url: /flixy-dermdoc-night-cream/p/itm8ea871588ac43?pid=MSCHZQHFKYCHHHDS&lid=LSTMSCHZQHFKYCHHHDSDYFP4M&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_33&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.MSCHZQHFKYCHHHDS.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "FLIXY DermDoc night cream"
+  - img
+- link "FLIXY DermDoc night cream":
+  - /url: /flixy-dermdoc-night-cream/p/itm8ea871588ac43?pid=MSCHZQHFKYCHHHDS&lid=LSTMSCHZQHFKYCHHHDSDYFP4M&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_33&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.MSCHZQHFKYCHHHDS.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 1 g 3.8
+- img
+- text: (104)
+- img
+- link "₹169 ₹699 75% off":
+  - /url: /flixy-dermdoc-night-cream/p/itm8ea871588ac43?pid=MSCHZQHFKYCHHHDS&lid=LSTMSCHZQHFKYCHHHDSDYFP4M&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_33&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.MSCHZQHFKYCHHHDS.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "Control D 50 Sugar strips 50 Glucometer Strips":
+  - /url: /control-d-50-sugar-strips-glucometer/p/itmfyefetg6ttbzc?pid=GLTG2FZGPSV4GKUA&lid=LSTGLTG2FZGPSV4GKUACSYAUV&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_34&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.GLTG2FZGPSV4GKUA.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Control D 50 Sugar strips 50 Glucometer Strips"
+  - img
+- link "Control D 50 Sugar strips 50 Glucometer Strips":
+  - /url: /control-d-50-sugar-strips-glucometer/p/itmfyefetg6ttbzc?pid=GLTG2FZGPSV4GKUA&lid=LSTGLTG2FZGPSV4GKUACSYAUV&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_34&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.GLTG2FZGPSV4GKUA.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: "4.3"
+- img
+- text: (6,455)
+- img
+- link "₹498 ₹1,069 53% off":
+  - /url: /control-d-50-sugar-strips-glucometer/p/itmfyefetg6ttbzc?pid=GLTG2FZGPSV4GKUA&lid=LSTGLTG2FZGPSV4GKUACSYAUV&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_34&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.GLTG2FZGPSV4GKUA.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "Dr care Heating Pad Heating Pad":
+  - /url: /care-heating-pad/p/itmf95338ceab9f3?pid=HPDGFYHHHECHDCVS&lid=LSTHPDGFYHHHECHDCVSFGQY1F&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_35&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UVnwc48Dsiu6xK6ewW5ckUAXg2uR2nmgDUXgTzFY5dJC3f5J1dhQB9zB6Lc1FH4sljA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Dr care Heating Pad Heating Pad"
+  - img
+- img
+- link "Dr care Heating Pad Heating Pad":
+  - /url: /care-heating-pad/p/itmf95338ceab9f3?pid=HPDGFYHHHECHDCVS&lid=LSTHPDGFYHHHECHDCVSFGQY1F&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_35&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UVnwc48Dsiu6xK6ewW5ckUAXg2uR2nmgDUXgTzFY5dJC3f5J1dhQB9zB6Lc1FH4sljA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: "4.1"
+- img
+- text: (1,945)
+- img
+- link "₹619 ₹1,599 61% off":
+  - /url: /care-heating-pad/p/itmf95338ceab9f3?pid=HPDGFYHHHECHDCVS&lid=LSTHPDGFYHHHECHDCVSFGQY1F&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_35&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UVnwc48Dsiu6xK6ewW5ckUAXg2uR2nmgDUXgTzFY5dJC3f5J1dhQB9zB6Lc1FH4sljA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "Velfree 300 ml Manual Ice Cream Maker":
+  - /url: /velfree-300-ml-manual-ice-cream-maker/p/itm976f11ae51fa4?pid=ICMHH3UQE249BMGE&lid=LSTICMHH3UQE249BMGEFGWBYK&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_36&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ICMHH3UQE249BMGE.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Velfree 300 ml Manual Ice Cream Maker"
+  - img
+- link "Velfree 300 ml Manual Ice Cream Maker":
+  - /url: /velfree-300-ml-manual-ice-cream-maker/p/itm976f11ae51fa4?pid=ICMHH3UQE249BMGE&lid=LSTICMHH3UQE249BMGEFGWBYK&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_36&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ICMHH3UQE249BMGE.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Blue 4.1
+- img
+- text: (543)
+- img
+- link "₹83 ₹499 83% off":
+  - /url: /velfree-300-ml-manual-ice-cream-maker/p/itm976f11ae51fa4?pid=ICMHH3UQE249BMGE&lid=LSTICMHH3UQE249BMGEFGWBYK&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_36&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.ICMHH3UQE249BMGE.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Hot Deal
+- link "Clickzy Premium Portable Hanging Digital Weight Machine 50 Kg with Metal Hook Balance Scale":
+  - /url: /clickzy-premium-portable-hanging-digital-weight-machine-50-kg-metal-hook-balance-scale/p/itmb030c50d8385d?pid=BLEHP5ZN2QQF9ZH6&lid=LSTBLEHP5ZN2QQF9ZH6XUYM5Q&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_37&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UUKaCB0ZyTmHiHucEagoCUOrVzNP909bAHbrsL-gSDX9I4iyPUII3A_jb912eNB_97A7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Clickzy Premium Portable Hanging Digital Weight Machine 50 Kg with Metal Hook Balance Scale"
+  - img
+- img
+- link "Clickzy Premium Portable Hanging Digital Weight Machine...":
+  - /url: /clickzy-premium-portable-hanging-digital-weight-machine-50-kg-metal-hook-balance-scale/p/itmb030c50d8385d?pid=BLEHP5ZN2QQF9ZH6&lid=LSTBLEHP5ZN2QQF9ZH6XUYM5Q&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_37&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UUKaCB0ZyTmHiHucEagoCUOrVzNP909bAHbrsL-gSDX9I4iyPUII3A_jb912eNB_97A7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Scale
+- img
+- link "₹178 ₹799 77% off":
+  - /url: /clickzy-premium-portable-hanging-digital-weight-machine-50-kg-metal-hook-balance-scale/p/itmb030c50d8385d?pid=BLEHP5ZN2QQF9ZH6&lid=LSTBLEHP5ZN2QQF9ZH6XUYM5Q&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_37&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UUKaCB0ZyTmHiHucEagoCUOrVzNP909bAHbrsL-gSDX9I4iyPUII3A_jb912eNB_97A7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- link "Yiveko 2-in-1 Facial Hair Remover & Eyebrow Trimmer for Women | USB Rechargeable Painless Face Hair Removal Device | Eyebrow Shaper, Upper Lip, Chin & Peach Fuzz Remover with LED Light (Rose Gold) Cordless Epilator":
+  - /url: /yiveko-2-in-1-facial-hair-remover-eyebrow-trimmer-women-usb-rechargeable-painless-face-removal-device-shaper-upper-lip-chin-peach-fuzz-led-light-rose-gold-cordless-epilator/p/itm6ffc0ba3f1fc5?pid=EPRHZPJ2SZECPDPH&lid=LSTEPRHZPJ2SZECPDPHE2VO9A&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_38&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UVWHhQn3hl4ddaojA_REQo6OSJIQf4AjaDa_ZLFTPmzW3HVckPdTZT8WpKiQeJFYzTA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "Yiveko 2-in-1 Facial Hair Remover & Eyebrow Trimmer for Women | USB Rechargeable Painless Face Hair Removal Device | Eyebrow Shaper, Upper Lip, Chin & Peach Fuzz Remover with LED Light (Rose Gold) Cordless Epilator"
+  - img
+- img
+- link "Yiveko 2-in-1 Facial Hair Remover & Eyebrow Trimmer for...":
+  - /url: /yiveko-2-in-1-facial-hair-remover-eyebrow-trimmer-women-usb-rechargeable-painless-face-removal-device-shaper-upper-lip-chin-peach-fuzz-led-light-rose-gold-cordless-epilator/p/itm6ffc0ba3f1fc5?pid=EPRHZPJ2SZECPDPH&lid=LSTEPRHZPJ2SZECPDPHE2VO9A&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_38&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UVWHhQn3hl4ddaojA_REQo6OSJIQf4AjaDa_ZLFTPmzW3HVckPdTZT8WpKiQeJFYzTA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Gold 4
+- img
+- text: (6)
+- link "₹135 ₹699 80% off":
+  - /url: /yiveko-2-in-1-facial-hair-remover-eyebrow-trimmer-women-usb-rechargeable-painless-face-removal-device-shaper-upper-lip-chin-peach-fuzz-led-light-rose-gold-cordless-epilator/p/itm6ffc0ba3f1fc5?pid=EPRHZPJ2SZECPDPH&lid=LSTEPRHZPJ2SZECPDPHE2VO9A&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_38&otracker=browse&iid=en_LyjQcui7ApHIjSgF9_epI5qssGkwPSySoHH9_Dwi4UVWHhQn3hl4ddaojA_REQo6OSJIQf4AjaDa_ZLFTPmzW3HVckPdTZT8WpKiQeJFYzTA7kX-WpPqyznCIUiqTw9k&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Super Deals
+- link "REDMI Smart Pen Stylus":
+  - /url: /redmi-smart-pen-stylus/p/itma3679830da1c6?pid=STSH39KUGER5Z83S&lid=LSTSTSH39KUGER5Z83SZLTCKB&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_39&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.STSH39KUGER5Z83S.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "REDMI Smart Pen Stylus"
+  - img
+- link "REDMI Smart Pen Stylus":
+  - /url: /redmi-smart-pen-stylus/p/itma3679830da1c6?pid=STSH39KUGER5Z83S&lid=LSTSTSH39KUGER5Z83SZLTCKB&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_39&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.STSH39KUGER5Z83S.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: White 4.3
+- img
+- text: (197)
+- img
+- link "₹4,198 ₹5,999 30% off":
+  - /url: /redmi-smart-pen-stylus/p/itma3679830da1c6?pid=STSH39KUGER5Z83S&lid=LSTSTSH39KUGER5Z83SZLTCKB&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_39&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.STSH39KUGER5Z83S.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Only 5 left
+- link "FLIXY Snake Repellent Tablets Herbal Formula Indoor Outdoor":
+  - /url: /flixy-snake-repellent-tablets-herbal-formula-indoor-outdoor/p/itm663aa9535bb2e?pid=IRPHZPBUFXGHFFVQ&lid=LSTIRPHZPBUFXGHFFVQU81FP6&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_40&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.IRPHZPBUFXGHFFVQ.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+  - img "FLIXY Snake Repellent Tablets Herbal Formula Indoor Outdoor"
+  - img
+- link "FLIXY Snake Repellent Tablets Herbal Formula Indoor Out...":
+  - /url: /flixy-snake-repellent-tablets-herbal-formula-indoor-outdoor/p/itm663aa9535bb2e?pid=IRPHZPBUFXGHFFVQ&lid=LSTIRPHZPBUFXGHFFVQU81FP6&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_40&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.IRPHZPBUFXGHFFVQ.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: 250 g 4.2
+- img
+- text: (30)
+- img
+- link "₹261 ₹399 34% off":
+  - /url: /flixy-snake-repellent-tablets-herbal-formula-indoor-outdoor/p/itm663aa9535bb2e?pid=IRPHZPBUFXGHFFVQ&lid=LSTIRPHZPBUFXGHFFVQU81FP6&marketplace=FLIPKART&store=search.flipkart.com&srno=b_1_40&otracker=browse&iid=a5923ce8-e85d-4e17-8620-ba5f9bd0f45d.IRPHZPBUFXGHFFVQ.SEARCH&ssid=lc3hrw9awg0000001785118570877&ov_redirect=true&ov_redirect=true
+- text: Super Deals Page 1 of 6,257
+- navigation:
+  - link "1":
+    - /url: /search?page=1
+  - link "2":
+    - /url: /search?page=2
+  - link "3":
+    - /url: /search?page=3
+  - link "4":
+    - /url: /search?page=4
+  - link "5":
+    - /url: /search?page=5
+  - link "6":
+    - /url: /search?page=6
+  - link "7":
+    - /url: /search?page=7
+  - link "8":
+    - /url: /search?page=8
+  - link "9":
+    - /url: /search?page=9
+  - link "10":
+    - /url: /search?page=10
+  - link "Next":
+    - /url: /search?page=2
+- text: Did you find what you were looking for? Yes No Reviews for Popular All Categories
+- img "Krishna's Herbal & Ayurveda Diabic Care Juice | Helps Manage Blood Sugar | Boosts Metabolism and Improves Digestion | Stimulate Insulin Secretion | Helps Manage Weight"
+- link "1. Krishna's Herbal & Ayurveda... 4.3 49,465 Ratings&2,032 Reviews ₹243":
+  - /url: /krishna-s-herbal-ayurveda-diabic-care-juice-helps-manage-blood-sugar-boosts-metabolism-improves-digestion-stimulate-insulin-secretion-weight/p/itm2f6fe87382435?pid=AYDFWYWFQK4FYDXC&marketplace=FLIPKART&ov_redirect=true
+  - text: 1. Krishna's Herbal & Ayurveda... 4.3
+  - img
+  - text: 49,465 Ratings&2,032 Reviews ₹243
+- list:
+  - listitem: "Quantity: 500 ml"
+  - listitem: "Form: Liquid"
+  - listitem: "Ayush License Number: 627-AYU"
+- text: Most Helpful Review 5
+- img
+- paragraph: Super!
+- text: Im having this juice from last 3 months I totally reverse my diabetes naw my hba1c report also normal im so happy its unbelievable for me but friends its ... Read full review
+- paragraph: Roshan Biswa
+- img
+- paragraph: Certified Buyer
+- paragraph: Jan, 2024
+- text: Recent Review 2
+- img
+- paragraph: Slightly disappointed
+- text: Krishna Herbal & Ayurveda debic Care is a completely disappointing product. I used it regularly for three months, but I didn't see any improvement or ben... Read full review
+- paragraph: Ajay Kohli
+- img
+- paragraph: Certified Buyer
+- paragraph: 2 days ago
+- img "airtech Strong metal Black tripod stand with ring light for phography and video Ring Flash"
+- link "2. airtech Strong metal Black ... 3.8 20,510 Ratings&1,221 Reviews ₹656 67% off":
+  - /url: /airtech-strong-metal-black-tripod-stand-ring-light-phography-video-flash/p/itm1469c7da7cdde?pid=ACCGE7FB895669UV&marketplace=FLIPKART&ov_redirect=true
+  - text: 2. airtech Strong metal Black ... 3.8
+  - img
+  - text: 20,510 Ratings&1,221 Reviews ₹656 67% off
+- list:
+  - listitem: "Suitable For: Mobile"
+  - listitem: "Type: Ring Flash"
+- text: Most Helpful Review 3
+- img
+- paragraph: Does the job
+- text: Very nice product but ring light was small but very nice 👍🏻
+- paragraph: Nutan Tiwari
+- img
+- paragraph: Certified Buyer
+- paragraph: May, 2024
+- text: Recent Review 1
+- img
+- paragraph: Absolute rubbish!
+- text: Power button not working after one day only
+- paragraph: RAHUL DEY
+- img
+- paragraph: Certified Buyer
+- paragraph: 5 days ago
+- img "mushroomex Mushroom Powder"
+- link "3. mushroomex Mushroom Powder 4.1 8,984 Ratings&269 Reviews ₹332 16% off":
+  - /url: /mushroomex-mushroom-powder/p/itmd838283d87952?pid=AYDFWHJHFHQQSHKS&marketplace=FLIPKART&ov_redirect=true
+  - text: 3. mushroomex Mushroom Powder 4.1
+  - img
+  - text: 8,984 Ratings&269 Reviews ₹332 16% off
+- list:
+  - listitem: "Quantity: 100"
+  - listitem: "Form: Powder"
+  - listitem: "Ayush License Number: MP25D/11/131"
+- text: Most Helpful Review 5
+- img
+- paragraph: Just wow!
+- text: Nice product...gain weight 3 kg in 2 week
+- paragraph: Flipkart Customer
+- img
+- paragraph: Certified Buyer
+- paragraph: Oct, 2020
+- text: Recent Review 4
+- img
+- paragraph: Good quality product
+- text: Almost good for health
+- paragraph: Rajpoot Raj Thakur
+- img
+- paragraph: Certified Buyer
+- paragraph: 1 month ago
+- img "FLIXY Snake Repellent Tablets Herbal Formula Indoor Outdoor"
+- link "4. FLIXY Snake Repellent Table... 4.2 30 Ratings&21 Reviews ₹261 34% off":
+  - /url: /flixy-snake-repellent-tablets-herbal-formula-indoor-outdoor/p/itm663aa9535bb2e?pid=IRPHZPBUFXGHFFVQ&marketplace=FLIPKART&ov_redirect=true
+  - text: 4. FLIXY Snake Repellent Table... 4.2
+  - img
+  - text: 30 Ratings&21 Reviews ₹261 34% off
+- list:
+  - listitem: "Quantity: 250 g"
+  - listitem: "Type: Coil"
+  - listitem: For Snakes
+- text: Most Helpful Review 5
+- img
+- paragraph: Excellent
+- text: Bought this for my garden area. The packaging is premium, and the product is simple to use. Good value for money.
+- paragraph: Akash Suryavanshi
+- img
+- paragraph: Certified Buyer
+- paragraph: 16 days ago
+- text: Recent Review 5
+- img
+- paragraph: Classy product
+- text: We keep these near our warehouse and backyard. The product is easy to maintain and does not require much effort.
+- paragraph: Tanvi Doshi
+- img
+- paragraph: Certified Buyer
+- paragraph: 16 days ago
+- img "ZORIADA Pack of 3 in 1 (1 Pcs Air fryer, 1 Set- Oil brush, 1 Set oven meat ) Airfryer Tray"
+- link "5. ZORIADA Pack of 3 in 1 (1 P... 3.8 660 Ratings&37 Reviews ₹194 80% off":
+  - /url: /zoriada-pack-3-1-1-pcs-air-fryer-set-oil-brush-set-oven-meat-airfryer-tray/p/itmbed72962c4275?pid=AFTGPFMFSQW6UEUD&marketplace=FLIPKART&ov_redirect=true
+  - text: 5. ZORIADA Pack of 3 in 1 (1 P... 3.8
+  - img
+  - text: 660 Ratings&37 Reviews ₹194 80% off
+- text: Most Helpful Review 5
+- img
+- paragraph: Brilliant
+- text: Best product you can order at this price very good
+- paragraph: Ravi Sindhe
+- img
+- paragraph: Certified Buyer
+- paragraph: Jul, 2025
+- text: Recent Review 2
+- img
+- paragraph: Moderate
+- text: This is very very bad product
+- paragraph: Balaji Balaji
+- img
+- paragraph: Certified Buyer
+- paragraph: 11 days ago
+- contentinfo:
+  - text: ABOUT
+  - link "Contact Us":
+    - /url: /helpcentre?otracker=footer_navlinks
+  - link "About Us":
+    - /url: https://corporate.flipkart.net/corporate-home
+  - link "Careers":
+    - /url: https://www.flipkartcareers.com/?otracker=footer_navlinks
+  - link "Flipkart Stories":
+    - /url: http://stories.flipkart.com/?otracker=footer_navlinks
+  - link "Press":
+    - /url: http://stories.flipkart.com/category/top-stories/news/
+  - link "Corporate Information":
+    - /url: /corporate-information
+  - text: GROUP COMPANIES
+  - link "Myntra":
+    - /url: https://www.myntra.com/
+  - link "Cleartrip":
+    - /url: https://www.cleartrip.com/
+  - link "Shopsy":
+    - /url: https://www.shopsy.in/
+  - text: HELP
+  - link "Payments":
+    - /url: /pages/payments
+  - link "Shipping":
+    - /url: /pages/shipping
+  - link "Cancellation & Returns":
+    - /url: /helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG
+  - link "FAQ":
+    - /url: /helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG
+  - text: CONSUMER POLICY
+  - link "Cancellation & Returns":
+    - /url: /pages/returnpolicy?otracker=footer_navlinks
+  - link "Terms Of Use":
+    - /url: /pages/terms?otracker=footer_navlinks
+  - link "Security":
+    - /url: /pages/paymentsecurity?otracker=footer_navlinks
+  - link "Privacy":
+    - /url: /pages/privacypolicy?otracker=footer_navlinks
+  - link "Sitemap":
+    - /url: /sitemap?otracker=footer_navlinks
+  - link "Grievance Redressal":
+    - /url: /pages/grievance-redressal-mechanism?otracker=footer_navlinks
+  - link "EPR Compliance":
+    - /url: /pages/ewaste-compliance-tnc?otracker=footer_navlinks
+  - link "FSSAI Food Safety Connect App":
+    - /url: https://fssai.gov.in/cms/food-safety-connect.php
+  - text: "Mail Us:"
+  - paragraph: Flipkart Internet Private Limited,
+  - paragraph: Buildings Alyssa, Begonia &
+  - paragraph: Clove Embassy Tech Village,
+  - paragraph: Outer Ring Road, Devarabeesanahalli Village,
+  - paragraph: Bengaluru, 560103,
+  - paragraph: Karnataka, India
+  - text: Social
+  - link:
+    - /url: https://www.facebook.com/flipkart
+    - img
+  - link:
+    - /url: https://www.twitter.com/flipkart
+    - img
+  - link:
+    - /url: https://www.youtube.com/flipkart
+    - img
+  - link:
+    - /url: https://www.instagram.com/flipkart
+    - img
+  - text: "Registered Office Address:"
+  - paragraph: Flipkart Internet Private Limited,
+  - paragraph: Buildings Alyssa, Begonia &
+  - paragraph: Clove Embassy Tech Village,
+  - paragraph: Outer Ring Road, Devarabeesanahalli Village,
+  - paragraph: Bengaluru, 560103,
+  - paragraph: Karnataka, India
+  - paragraph: "CIN : U51109KA2012PTC066107"
+  - paragraph:
+    - text: "Telephone:"
+    - link "044-45614700":
+      - /url: tel:044-45614700
+    - text: /
+    - link "044-67415800":
+      - /url: tel:044-67415800
+  - img
+  - link "Become a Seller":
+    - /url: https://seller.flipkart.com/?utm_source=fkwebsite&utm_medium=websitedirect
+  - img
+  - text: Advertise
+  - img
+  - link "Gift Cards":
+    - /url: /the-gift-card-store?otracker=footer_navlinks
+  - img
+  - link "Help Center":
+    - /url: /helpcentre?otracker=footer_navlinks
+  - text: © 2007-2026 Flipkart.com
+  - img
+```
+
+# Test source
+
+```ts
+  1  | import {test,expect, Locator} from '@playwright/test'
+  2  | 
+  3  | test.describe('Handle SVG Elements', () =>{
+  4  |     test.beforeEach(async({page}) =>{
+  5  |         page.goto('https://www.flipkart.com/search')
+  6  |     })
+  7  | 
+  8  |     test('Handle SVG', async({page}) =>{
+  9  |         page.getByPlaceholder('Search for products, brands and more').fill('Macmini')
+  10 |         
+  11 |         const svgelements = page.locator('svg')
+  12 |         await svgelements.first().click()
+  13 | 
+  14 |         const firstresult: Locator = page.locator('//div[contains(@data-id,"CPU")]/div/a[2]')
+> 15 |         await expect(firstresult.first()).toBeVisible({ timeout: 15000 });
+     |                                           ^ Error: expect(locator).toBeVisible() failed
+  16 |     })
+  17 | })
+```

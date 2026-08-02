@@ -163,3 +163,16 @@ test("TC11: Verify readonly input field does not accept user typing", async({pag
     await expect(readon).toHaveValue("This text is readonly");
 
 })
+
+test('TC12: Clear the field', async({page}) =>{
+    await page.goto('https://qaplayground.com/practice/input-fields')
+
+    await page.getByTestId('input-clear').clear()
+    await page.getByTestId('btn-clear-field').click()
+
+    const result = page.locator('#result-s04')
+    await expect(result).toHaveText('Field cleared ✓')
+    console.log(result);
+    
+})
+

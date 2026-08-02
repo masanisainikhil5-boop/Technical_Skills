@@ -1,0 +1,5 @@
+POM - Page Object Model
+
+class LoginPage always contains
+Page Locators
+Page Actions
